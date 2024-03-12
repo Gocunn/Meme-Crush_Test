@@ -1,51 +1,52 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meme Crush Project</title>
-    <link rel="stylesheet" href="candy.css">
-    <script src="candy.js"></script>
-    <style>
-        .button {
-            position: absolute;
-            top: 10px;
-            width: 100px;
-            height: 30px;
-            background-color: transparent;
-            border: none;
-            font-size: 16px;
-            cursor: pointer;
-            color: white;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Meme Crush Project</title>
+        <link rel="stylesheet" href="candy.css">
+        <script src="candy.js"></script>
+        <style>
+            .button {
+                position: absolute;
+                top: 10px;
+                width: 100px;
+                height: 30px;
+                background-color: transparent;
+                border: none;
+                font-size: 16px;
+                cursor: pointer;
+                color: white;
+            }
 
-        #leftButton {
-            left: 10px;
-        }
+            #leftButton {
+                left: 10px;
+            }
 
-        #rightButton {
-            right: 10px;
-        }
+            #rightButton {
+                right: 10px;
+            }
 
-        #helloWorld {
-            display: none;
-            position: absolute;
-            top: 50px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 24px;
-            font-family: Arial, Helvetica, sans-serif;
-            color: rgb(11, 250, 226);
-        }
-    </style>
-</head>
-<body>
-    <h1>Score: <span id="score">0</span></h1>
-    <div id="board"></div>
+            #helloWorld {
+                display: none;
+                position: absolute;
+                top: 50px;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 24px;
+                font-family: Arial, Helvetica, sans-serif;
+                color: rgb(11, 250, 226);
+            }
+        </style>
+    </head>
+    
+    <body>
+        <h1>Score: <span id="score">0</span></h1>
+        <div id="board"></div>
 
-    <button class="button" id="leftButton" onclick="showHelloWorld()">---</button>
-    <button class="button" id="rightButton" onclick="showHelloWorld()">---</button>
+        <button class="button" id="leftButton" onclick="showHelloWorld()">---</button>
+        <button class="button" id="rightButton" onclick="showHelloWorld()">---</button>
 
-    <div id="helloWorld">Hello World</div>
-</body>
+        <div id="helloWorld">Hello World</div>
+    </body>
 </html>
