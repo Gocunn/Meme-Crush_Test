@@ -17,6 +17,15 @@ window.onload = function() {
     }, 100);
 }
 
+function showHelloWorld() {
+    var helloWorld = document.getElementById("helloWorld");
+    if (helloWorld.style.display === "none") {
+        helloWorld.style.display = "block";
+    } else {
+        helloWorld.style.display = "none";
+    }
+}
+
 function randomCandy(){
     return candies[Math.floor(Math.random() * candies.length)]; //0 - 5.99
 }
@@ -185,15 +194,5 @@ function generateCandy(){
         if (board[0][c].src.includes("blank")){
             board[0][c].src = "./Image/" + randomCandy() + ".png"; 
         }
-    }
-}
-
-
-function showHelloWorld() {
-    var helloWorld = document.getElementById("helloWorld");
-    if (helloWorld.style.display === "none") {
-        helloWorld.style.display = "block";
-    } else {
-        helloWorld.style.display = "none";
     }
 }
