@@ -22,33 +22,20 @@ body {
     height: 50px;
 }
 
-.button {
+.logo {
     position: absolute;
-    top: 10px;
-    width: 100px;
-    height: 30px;
-    background-color: transparent;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    color: rgb(219, 166, 190);
-}
-
-#leftButton {
-    left: 10px;
-}
-
-#rightButton {
-    right: 10px;
-}
-
-#helloWorld {
-    display: none;
-    position: absolute;
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 20px;
+    left: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 24px;
-    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.additional-text {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
     color: white;
 }
