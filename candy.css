@@ -1,35 +1,35 @@
+/* Thiết lập font chữ và padding chung */
 body {
-    background: url("./Background.jpg") no-repeat center center fixed;
-    background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(6, 45, 240);
-    text-align: left;
     padding: 10px;
 }
 
-#board {
-    width: 100%;
-    max-width: 450px;
-    height: 450px;
-    background-color: #5f9ea0;
-    border: 5px solid rgb(248, 27, 215);
-    border-radius: 10px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
+/* Đảm bảo hình nền phủ đầy và không lặp lại */
+body {
+    background: url("./Background.jpg") no-repeat center center fixed;
+    background-size: cover;
 }
 
+/* Tùy chỉnh kích thước và margin của board-container */
+.board-container {
+    max-width: 90%; /* Giảm kích thước của bảng để phù hợp với màn hình nhỏ hơn */
+    margin: 0 auto; /* Canh giữa bảng */
+}
+
+/* Đảm bảo hình ảnh kẹo có kích thước phù hợp */
 #board img {
-    width: 50px;
-    height: 50px;
+    width: 10%; /* Điều chỉnh kích thước của hình ảnh để nó phù hợp với màn hình nhỏ hơn */
+    height: auto; /* Giữ tỷ lệ chiều cao để tránh biến dạng hình ảnh */
 }
 
+/* Điều chỉnh kích thước của điểm số */
 #score {
-    text-align: left;
+    font-size: 18px; /* Tăng kích thước của điểm số để dễ đọc hơn trên màn hình nhỏ */
 }
 
+/* Canh lề và định dạng cho phần credit */
 #credit {
-    margin-top: 30px;
+    margin-top: 20px; /* Giảm khoảng cách giữa credit và điểm số */
     text-align: center;
     font-style: italic;
     color: rgb(250, 3, 53);
