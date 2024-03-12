@@ -187,3 +187,12 @@ function generateCandy(){
         }
     }
 }
+
+// Hiển thị chữ "Genshin Crush" và "Gocunn" ngay khi trang web được tải
+document.addEventListener("DOMContentLoaded", function() {
+    var logo = document.querySelector(".logo");
+    var additionalText = document.querySelector(".additional-text");
+
+    logo.style.display = "block";
+    additionalText.style.display = "block";
+});
