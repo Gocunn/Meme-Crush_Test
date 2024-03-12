@@ -226,16 +226,25 @@ function handleMouseEvents() {
     }
 }
 
-// Hàm này xử lý sự kiện cảm ứng cho điện thoại
+// Xử lý sự kiện click cho máy tính
+function handleMouseEvents() {
+    for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < columns; c++) {
+            let tile = board[r][c];
+            tile.addEventListener("click", handleClick);
+        }
+    }
+}
+
+// Xử lý sự kiện cảm ứng cho điện thoại
 function handleTouchEvents() {
     for (let r = 0; r < rows; r++) {
         for (let c = 0; c < columns; c++) {
             let tile = board[r][c];
             tile.addEventListener("touchstart", handleTouchStart);
-            tile.addEventListener("touchend", handleTouchEnd);
         }
     }
-}
+} 
 
 // Hàm này được gọi khi một ô được click
 function handleClick() {
@@ -250,7 +259,7 @@ function handleClick() {
 }
 
 // Hàm này được gọi khi một ô touch kết thúc
-function handleTouchEnd(event) {
+function handleTouchStart(event) {
     // Ngăn chặn hành vi mặc định của trình duyệt
     event.preventDefault();
 
@@ -265,3 +274,4 @@ function handleTouchEnd(event) {
     // Thực hiện xử lý cho ô được chạm ở đây
     console.log("Touched at row " + row + " and column " + col);
 }
+
