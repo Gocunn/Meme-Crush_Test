@@ -2,8 +2,54 @@ body {
     background: url("./Background.jpg") no-repeat center center fixed;
     background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(238, 9, 9);
+    color: #ffffff; /* Đã đổi sang màu trắng cho dễ nhìn */
     text-align: center;
+}
+
+.logo {
+    font-size: 36px;
+    color: #ffffff; /* Màu chữ */
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    margin-top: 20px;
+}
+
+#score {
+    font-size: 48px; /* Kích thước lớn hơn */
+    color: #ffffff; /* Màu chữ trắng để nổi bật */
+    font-weight: bold; /* Làm đậm chữ */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7), 0 0 20px rgba(255, 255, 255, 0.8); /* Thêm bóng cho chữ */
+    background-color: rgba(0, 0, 0, 0.5); /* Nền trong suốt để tạo độ tương phản */
+    border: 2px solid #FFD700; /* Viền vàng */
+    border-radius: 10px; /* Bo góc cho viền */
+    padding: 10px 20px; /* Thêm khoảng cách bên trong */
+    position: absolute; /* Đặt vị trí tuyệt đối */
+    top: 47%; /* Đưa lên giữa theo chiều dọc */
+    left: 50%; /* Đưa sang giữa theo chiều ngang */
+    transform: translate(-50%, -50%); /* Đẩy phần tử về giữa chính xác */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Hiệu ứng chuyển động */
+}
+
+#score:hover {
+    transform: translate(-50%, -50%) scale(1.1); /* Hiệu ứng phóng to khi hover */
+    background-color: rgba(255, 215, 0, 0.5); /* Nền vàng nhạt khi hover */
+}
+
+#score-icon {
+    color: #FFD700; /* Màu vàng cho icon */
+    margin-left: 10px; /* Khoảng cách bên trái */
+    font-size: 48px; /* Kích thước icon */
+    animation: blink 1s infinite; /* Hiệu ứng nhấp nháy */
+    vertical-align: middle; /* Căn giữa với số điểm */
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1; /* Hiện */
+    }
+    50% {
+        opacity: 0; /* Ẩn */
+    }
 }
 
 #board {
@@ -12,9 +58,11 @@ body {
     background-color: #5f9ea0;
     border: 5px solid rgb(29, 127, 226);
     border-radius: 10px;
-    margin: 0 auto;
+    margin: 40px auto 0 10px; /* Đã tăng margin-top từ 20px lên 40px */
     display: flex;
     flex-wrap: wrap;
+    position: relative; /* Để nội dung có thể định vị */
+    left: 0; /* Dịch sang trái */
 }
 
 #board img {
@@ -27,9 +75,21 @@ body {
     top: 20px;
     left: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 24px;
-    color: white;
+    font-size: 36px; /* Tăng kích thước chữ */
+    color: #FFD700; /* Đổi màu chữ thành vàng để nổi bật hơn */
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7), 0 0 20px rgba(255, 255, 0, 0.8); /* Thêm bóng cho chữ với màu vàng nhạt */
+    background-color: rgba(0, 0, 0, 0.6); /* Nền trong suốt để tạo độ tương phản */
+    border: 2px solid #FFD700; /* Viền vàng */
+    border-radius: 10px; /* Bo góc cho viền */
+    padding: 10px 15px; /* Thêm khoảng cách bên trong */
+    transition: transform 0.3s ease; /* Hiệu ứng chuyển động */
 }
+
+.logo:hover {
+    transform: scale(1.1); /* Hiệu ứng phóng to khi hover */
+}
+
 
 .additional-text {
     position: absolute;

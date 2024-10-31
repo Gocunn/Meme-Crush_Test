@@ -196,3 +196,26 @@ document.addEventListener("DOMContentLoaded", function() {
     logo.style.display = "block";
     additionalText.style.display = "block";
 });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const scoreElement = document.getElementById('score');
+    let score = 0;
+
+    // Cập nhật điểm số
+    function updateScore() {
+        score++;
+        scoreElement.innerText = score;
+
+        // Thêm hiệu ứng cho số điểm
+        scoreElement.classList.add('score-animation');
+        
+        // Loại bỏ lớp hiệu ứng sau 0.5 giây
+        setTimeout(() => {
+            scoreElement.classList.remove('score-animation');
+        }, 500);
+    }
+
+    // Lắng nghe sự kiện nhấp chuột trên số điểm
+    scoreElement.addEventListener('click', updateScore);
+});
